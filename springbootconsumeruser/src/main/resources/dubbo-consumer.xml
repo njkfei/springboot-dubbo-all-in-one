@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 添加 DUBBO SCHEMA -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <context:property-placeholder location="classpath:application.properties"/>
+
+    <!-- 应用名 -->
+    <dubbo:application name="${dubbo.application.name}"/>
+    <!-- 连接到哪个注册中心（连接到本机的2181端口zookeeper） -->
+    <dubbo:registry address="${dubbo.registry.address}"/>
+    <!-- 消费方用什么协议获取服务（用dubbo协议在20880端口暴露服务） -->
+    <dubbo:protocol port="${dubbo.protocol.port}"/>
+    <!-- 提供哪些接口给消费者调用 -->
+    <dubbo:reference id="user-service" interface="com.jinhui.api.service.UserService" version="1.0.0"/>
+    <!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
+    <dubbo:annotation package="com.jinhui.springboot.dubbo.consumer" />
+</beans>
