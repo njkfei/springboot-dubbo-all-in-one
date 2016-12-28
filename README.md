@@ -45,3 +45,6 @@ mvn jgitflow:release-finish -DnoReleaseBuild=true -DnoDeploy=true -DpushReleases
 ```
 只需要两个步骤，即可完成release和打tag功能．比scm好用多了．
 
+
+## 与jenkins集成
+设置webhook即可．不需要pom参与了．
