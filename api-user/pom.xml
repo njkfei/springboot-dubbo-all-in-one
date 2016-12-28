@@ -37,6 +37,22 @@
                     <encoding>utf-8</encoding>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m3</version>
+                <!--                <configuration>
+                                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                                    <pushReleases>true</pushReleases>
+                                    <keepBranch>false</keepBranch>
+                                    <noDeploy>true</noDeploy>
+                                    <flowInitContext>
+                                        <developBranchName>develop</developBranchName>
+                                        <versionTagPrefix>release/</versionTagPrefix>
+                                    </flowInitContext>
+                                </configuration>-->
+            </plugin>
         </plugins>
     </build>
 
