@@ -30,3 +30,18 @@
 ## 坑
 真的很多，看各个子目录下面的readme文件吧．
 
+### 关于release插件
+scm插件最开始是配合svn使用的.和git的配合不好，使用git打包时，建议使用jgitflow插件．大厂出口，值得信任．
+
+## 打包release
+在develop分支下面．
+运行
+```
+mvn jgitflow:release-start -DreleaseVersion=1.0.0 -DdevelopmentVersion=1.1.0-SNAPSHOT -DpushReleases=true -DallowSnapshots=true
+```
+
+```
+mvn jgitflow:release-finish -DnoReleaseBuild=true -DnoDeploy=true -DpushReleases=true
+```
+只需要两个步骤，即可完成release和打tag功能．比scm好用多了．
+
