@@ -24,6 +24,7 @@
 - logs: 系统运行日志
 
 如下图所示：
+
 ![image](http://ww3.sinaimg.cn/large/3d84c572jw1fb55vaelkzj20dh0lu0zs.jpg)
 
 ## 步骤
