@@ -13,8 +13,8 @@
 - 代码，配置分离，方便运维开发
 - 自带tomcat容器，可以方便扩展
 - 自带神器springboot,简化依赖配置
-- 有发布功能哦．通过jgitflow插件完成
-
+- 有代码发布功能哦．通过jgitflow插件完成
+- jar包远程仓库发布,通过deploy插件
 ## dubbo-provider-with-springboot
 这个项目，是服务提供者，基本全部是注解，采用jdk1.7．
 
@@ -48,3 +48,13 @@ mvn jgitflow:release-finish -DnoReleaseBuild=true -DnoDeploy=true -DpushReleases
 
 ## 与jenkins集成
 设置webhook即可．不需要pom参与了．
+
+## 远程发布jar包
+```
+mvn jgitflow:release-finish
+```后，切换到master分支，然后进行发布．发布完之后，记得切回develop分支．当然，如果和jenkns集成后，就更方便了．
+```
+$ git checkout master
+$ mvn jar:jar deploy:deploy
+$ git checkout deveop
+```
