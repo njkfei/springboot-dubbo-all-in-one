@@ -15,6 +15,8 @@
 - 自带神器springboot,简化依赖配置
 - 有代码发布功能哦．通过jgitflow插件完成
 - jar包远程仓库发布,通过deploy插件
+
+
 ## dubbo-provider-with-springboot
 这个项目，是服务提供者，基本全部是注解，采用jdk1.7．
 
