@@ -52,11 +52,15 @@ mvn jgitflow:release-finish -DnoReleaseBuild=true -DnoDeploy=true -DpushReleases
 ## 远程发布jar包
 ```
 mvn jgitflow:release-finish
-```后，切换到master分支，然后进行发布．发布完之后，记得切回develop分支．当然，如果和jenkns集成后，就更方便了．
+```
+后，切换到master分支，然后进行发布．发布完之后，记得切回develop分支．当然，如果和jenkns集成后，就更方便了．
+
 ```
 $ git checkout master
 $ mvn jar:jar deploy:deploy
 $ git checkout deveop
 ```
+
 ## 监控
-采用dubbokeeper.见[https://github.com/dubboclub/dubbokeeper](https://github.com/dubboclub/dubbokeeper)
+
+采用dubbokeeper.比官方的功能丰富.见[https://github.com/dubboclub/dubbokeeper](https://github.com/dubboclub/dubbokeeper)
