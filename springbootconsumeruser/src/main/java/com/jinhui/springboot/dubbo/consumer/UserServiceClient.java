@@ -9,6 +9,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceClient {
-    @Reference(version="1.0.0")
+    @Reference(version="1.0.0",filter="TraceConsumerFilter")
     public  UserService userService;
 }
