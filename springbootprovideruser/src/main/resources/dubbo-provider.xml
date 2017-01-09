@@ -8,8 +8,8 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="user-service"/>
-    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
+    <dubbo:application name="user-service" logger="slf4j"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" protocol="zookeeper" />
     <dubbo:protocol name="dubbo" port="20880" />
     <dubbo:monitor protocol="registry"/>
     <dubbo:annotation package="com.jinhui.dubbo.serviceImpl"/>  <!-- 需要自动打描的包路径 -->
