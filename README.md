@@ -66,3 +66,7 @@ $ git checkout deveop
 ## 监控
 
 采用dubbokeeper.比官方的功能丰富.见[https://github.com/dubboclub/dubbokeeper](https://github.com/dubboclub/dubbokeeper)
+
+## trace
+采用dubbo-trace,见[https://github.com/ihaolin/dubbo-trace](https://github.com/ihaolin/dubbo-trace).
+结合zipkin server,可实现分布式tracing的功能。
